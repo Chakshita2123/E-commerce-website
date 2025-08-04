@@ -141,10 +141,9 @@
     <div class="footer-col legal">
       <h4>Legal</h4>
       <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Shipping & Returns</a></li>
-
+        <li><a href="#" onclick="openPrivacyModal()">Privacy Policy</a></li>
+        <li><a href="#" onclick="openTermsModal()">Terms of Service</a></li>
+        <li><a href="#" onclick="openShippingModal()">Shipping & Returns</a></li>   
       </ul>
     </div>
 
@@ -156,6 +155,48 @@
 </footer>
 
 
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closePrivacyModal()">&times;</span>
+    <h2>Privacy Policy</h2>
+    <p>
+      At Luméra, we value your privacy. We collect only necessary information to fulfill your orders and improve your experience. Your data is never sold or shared with third parties without consent.
+    </p>
+    <p>
+      We use cookies to personalize your experience and analytics to improve our services. By using our website, you agree to our privacy practices.
+    </p>
+    <!-- Add more content here as needed -->
+  </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeTermsModal()">&times;</span>
+    <h2>Terms of Service</h2>
+    <p>
+      By using Luméra, you agree to our terms. You may not use our products for illegal or unauthorized purposes. All purchases are subject to availability and pricing.
+    </p>
+    <p>
+      We reserve the right to refuse service, update policies, and modify content at any time.
+    </p>
+  </div>
+</div>
+
+<!-- Shipping & Returns Modal -->
+<div id="shippingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeShippingModal()">&times;</span>
+    <h2>Shipping & Returns</h2>
+    <p>
+      Orders are processed within 1–3 business days. We offer standard and express shipping options. Once shipped, you’ll receive tracking details.
+    </p>
+    <p>
+      If you're not satisfied, you may request a return within 7 days of delivery, provided the item is unused and in original condition.
+    </p>
+  </div>
+</div>
 
 
 
