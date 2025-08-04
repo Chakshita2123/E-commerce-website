@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment – Luméra</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>Checkout</h2>
+
+    <!-- Order Summary -->
+    <div class="payment-section">
+      <h3>Order Summary</h3>
+      <div id="payment-items"></div>
+      <p class="total">Total: ₹<span id="payment-total">0</span></p>
+    </div>
+
+    <!-- User Info -->
+    <div class="payment-section">
+      <h3>Billing Details</h3>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Shipping Address" required>
+    </div>
+
+    <!-- Payment Methods -->
+    <div class="payment-section">
+      <h3>Choose Payment Method</h3>
+      <label><input type="radio" name="method" checked> UPI</label><br>
+      <label><input type="radio" name="method"> Debit/Credit Card</label><br>
+      <label><input type="radio" name="method"> Wallet</label>
+    </div>
+
+    <!-- Pay Button -->
+    <button class="pay-btn">PAY NOW</button>
+  </div>
+
+  <script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const itemsDiv = document.getElementById("payment-items");
+  const totalSpan = document.getElementById("payment-total");
+  let total = 0;
+
+  cart.forEach(item => {
+    const div = document.createElement("div");
+    div.innerHTML = `<p>${item.name} × ${item.quantity} — ₹${item.price * item.quantity}</p>`;
+    itemsDiv.appendChild(div);
+    total += item.price * item.quantity;
+  });
+
+  totalSpan.textContent = total;
+
+  // ✅ Add this for redirecting after payment
+  document.querySelector(".pay-btn").addEventListener("click", () => {
+    // Optionally validate billing info here
+    localStorage.removeItem("cart"); // clear cart after payment
+    window.location.href = "thank you.html"; // redirect to thank you page
+  });
+</script>
+
+
+</body>
+</html>

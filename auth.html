@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luméra – Login / Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #FFF9F4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .auth-container {
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    .auth-container input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .auth-container button {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #76363D;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-container button:hover {
+      background-color: #5b292e;
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .toggle-link a {
+      color: #76363D;
+      text-decoration: none;
+    }
+
+    .toggle-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container" id="authBox">
+    <h2 id="formTitle">Login to Luméra</h2>
+    <input type="email" placeholder="Email" id="email">
+    <input type="password" placeholder="Password" id="password">
+    <button onclick="submitForm()">Login</button>
+    <div class="toggle-link">
+      <span id="toggleText">Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></span>
+    </div>
+  </div>
+
+  <script>
+    let isSignup = false;
+
+    function toggleForm() {
+      isSignup = !isSignup;
+      document.getElementById("formTitle").innerText = isSignup ? "Create an Account" : "Login to Luméra";
+      document.querySelector("button").innerText = isSignup ? "Sign Up" : "Login";
+      document.getElementById("toggleText").innerHTML = isSignup 
+        ? 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>'
+        : 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign up</a>';
+    }
+
+    function submitForm() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      alert(`${isSignup ? 'Signup' : 'Login'} submitted\nEmail: ${email}`);
+    }
+  </script>
+
+</body>
+</html>
