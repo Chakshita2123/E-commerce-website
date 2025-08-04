@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
+from whitenoise import WhiteNoise
 import os
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
 app.config['SECRET_KEY'] = 'your_secret_key_change_this_in_production'  # Change this to a random secret key
 
 bcrypt = Bcrypt(app)
