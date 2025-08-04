@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Search Results – Luméra</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
   <script defer>
     const allProducts = [
       { name: "Midnight Rose", image: "midnight rose.webp", price: 899 },
@@ -60,11 +62,12 @@
       width: 220px;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
       padding: 1rem;
       text-align: center;
       margin: 1rem;
     }
+
     #search-results {
       display: flex;
       flex-wrap: wrap;
@@ -72,8 +75,10 @@
     }
   </style>
 </head>
+
 <body>
   <h2 style="text-align:center; margin-top: 2rem;">Search Results</h2>
   <div id="search-results"></div>
 </body>
+
 </html>

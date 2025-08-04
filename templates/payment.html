@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Payment – Luméra</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <div class="payment-container">
@@ -39,28 +42,29 @@
   </div>
 
   <script>
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const itemsDiv = document.getElementById("payment-items");
-  const totalSpan = document.getElementById("payment-total");
-  let total = 0;
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const itemsDiv = document.getElementById("payment-items");
+    const totalSpan = document.getElementById("payment-total");
+    let total = 0;
 
-  cart.forEach(item => {
-    const div = document.createElement("div");
-    div.innerHTML = `<p>${item.name} × ${item.quantity} — ₹${item.price * item.quantity}</p>`;
-    itemsDiv.appendChild(div);
-    total += item.price * item.quantity;
-  });
+    cart.forEach(item => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p>${item.name} × ${item.quantity} — ₹${item.price * item.quantity}</p>`;
+      itemsDiv.appendChild(div);
+      total += item.price * item.quantity;
+    });
 
-  totalSpan.textContent = total;
+    totalSpan.textContent = total;
 
-  // ✅ Add this for redirecting after payment
-  document.querySelector(".pay-btn").addEventListener("click", () => {
-    // Optionally validate billing info here
-    localStorage.removeItem("cart"); // clear cart after payment
-    window.location.href = "thank you.html"; // redirect to thank you page
-  });
-</script>
+    // ✅ Add this for redirecting after payment
+    document.querySelector(".pay-btn").addEventListener("click", () => {
+      // Optionally validate billing info here
+      localStorage.removeItem("cart"); // clear cart after payment
+      window.location.href = "thank you.html"; // redirect to thank you page
+    });
+  </script>
 
 
 </body>
+
 </html>
