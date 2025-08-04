@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Luméra – Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <script src="script.js" defer></script>
   <!-- Fonts for luxury look -->
@@ -128,14 +130,15 @@
     </div>
 
     <!-- Social Media -->
-    <div class="footer-col social">
+    <div class="footer-socials">
       <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><img src="instagram.svg" alt="Instagram"><span>Instagram</span></a>
-        <a href="#"><img src="facebook.svg" alt="Facebook"><span>Facebook</span></a>
-        <a href="#"><img src="twitter.svg" alt="Twitter"><span>Twitter</span></a>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
+
 
     <!-- Legal -->
     <div class="footer-col legal">

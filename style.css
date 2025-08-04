@@ -960,3 +960,20 @@ html, body {
   cursor: pointer;
   color: #444;
 }
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: #76363D;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #5c2a30;
+}

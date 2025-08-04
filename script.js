@@ -685,3 +685,14 @@ function openShippingModal() {
 function closeShippingModal() {
   document.getElementById('shippingModal').style.display = 'none';
 }
+
+document.querySelector(".pay-btn").addEventListener("click", () => {
+  // simulate a brief delay
+  document.querySelector(".pay-btn").textContent = "Processing...";
+  document.querySelector(".pay-btn").disabled = true;
+
+  setTimeout(() => {
+    localStorage.removeItem("cart");
+    window.location.href = "thank you.html";
+  }, 1000);
+});
