@@ -837,3 +837,126 @@ html, body {
 .pay-btn:hover {
   background-color: #5c2a30;
 }
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-right ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .icons {
+    gap: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0.8rem;
+  }
+
+  .hero-doft {
+    height: 60vh;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .nav-right ul {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+.auth-links {
+  margin-left: 15px;
+  font-size: 0.9rem;
+}
+
+.auth-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #a77d52; /* or your brand color */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #444;
+}
