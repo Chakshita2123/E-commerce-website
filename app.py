@@ -6,7 +6,10 @@ import os
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
-app.config['SECRET_KEY'] = 'your_secret_key_change_this_in_production'  # Change this to a random secret key
+#app.config['SECRET_KEY'] = 'your_secret_key_change_this_in_production'  # Change this to a random secret key
+import os
+app.secret_key = os.environ.get("SECRET_KEY", "default_key_for_dev")
+
 
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
@@ -92,9 +95,14 @@ def auth():
         return redirect(url_for('index'))
     return render_template('auth.html')
 
+#@app.route('/')
+#def index():
+    #return render_template('homepage.html', user_count=len(users))
+
 @app.route('/')
-def index():
-    return render_template('homepage.html', user_count=len(users))
+def homepage():
+    return render_template('homepage.html')
+
 
 @app.route('/<page_name>')
 def show_page(page_name):
