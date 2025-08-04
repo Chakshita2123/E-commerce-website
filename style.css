@@ -837,3 +837,81 @@ html, body {
 .pay-btn:hover {
   background-color: #5c2a30;
 }
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-right ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .icons {
+    gap: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0.8rem;
+  }
+
+  .hero-doft {
+    height: 60vh;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .nav-right ul {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}

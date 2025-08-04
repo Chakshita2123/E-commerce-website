@@ -48,19 +48,34 @@
       background-color: #5c2a30;
     }
   </style>
+  <meta http-equiv="refresh" content="4; url=index.html">
+
 </head>
 <body>
-
   <div class="thank-you-container">
     <h1>Thank You for Your Purchase!</h1>
     <p>Your Luméra candle is now part of your story. We’ve received your order and it’s already being lovingly prepared for shipping.</p>
-    <a href="index.html">Back to Home</a>
+    <p><em>You will be redirected to the homepage shortly...</em></p>
+    <a href="homepage.html">Back to Home</a>
   </div>
-  <script>
-  // Clear the cart after payment success
-  localStorage.removeItem("cart");
+
+ <script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Clear all known cart-related keys
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartItems");
+    localStorage.removeItem("lumeraCart");
+
+    // Also reset the cart count element if it exists
+    const cartCount = document.querySelector(".cart-count");
+    if (cartCount) {
+      cartCount.textContent = "0";
+    }
+
+    console.log("Cart cleared successfully.");
+  });
 </script>
 
 
-</body>
+
 </html>
