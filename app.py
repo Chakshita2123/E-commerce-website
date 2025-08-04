@@ -96,7 +96,14 @@ def index():
 
 @app.route('/<page_name>')
 def show_page(page_name):
+    # Ignore browser's automatic favicon request
+    if page_name == "favicon.ico":
+        return "", 204
+
+    # Render the page if it exists
     return render_template(page_name)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=8080)
