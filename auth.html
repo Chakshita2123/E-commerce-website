@@ -70,15 +70,42 @@
     .toggle-link a:hover {
       text-decoration: underline;
     }
+    .alert {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+    }
+    .alert-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    .alert-success {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
   </style>
 </head>
 <body>
 
   <div class="auth-container" id="authBox">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <h2 id="formTitle">Login to Luméra</h2>
-    <input type="email" placeholder="Email" id="email">
-    <input type="password" placeholder="Password" id="password">
-    <button onclick="submitForm()">Login</button>
+    <form id="authForm" method="POST" action="/login">
+        <input type="email" name="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <button type="submit">Login</button>
+    </form>
     <div class="toggle-link">
       <span id="toggleText">Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></span>
     </div>
@@ -89,17 +116,22 @@
 
     function toggleForm() {
       isSignup = !isSignup;
-      document.getElementById("formTitle").innerText = isSignup ? "Create an Account" : "Login to Luméra";
-      document.querySelector("button").innerText = isSignup ? "Sign Up" : "Login";
-      document.getElementById("toggleText").innerHTML = isSignup 
-        ? 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>'
-        : 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign up</a>';
-    }
+      const form = document.getElementById('authForm');
+      const title = document.getElementById('formTitle');
+      const button = form.querySelector('button');
+      const toggleText = document.getElementById('toggleText');
 
-    function submitForm() {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      alert(`${isSignup ? 'Signup' : 'Login'} submitted\nEmail: ${email}`);
+      if (isSignup) {
+        title.innerText = "Create an Account";
+        button.innerText = "Sign Up";
+        form.action = "/register";
+        toggleText.innerHTML = 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
+      } else {
+        title.innerText = "Login to Luméra";
+        button.innerText = "Login";
+        form.action = "/login";
+        toggleText.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign up</a>';
+      }
     }
   </script>
 
