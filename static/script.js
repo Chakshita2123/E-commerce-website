@@ -669,3 +669,19 @@ if (window.location.pathname.includes('cart.html')) {
 }
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
+
+function openTermsModal() {
+  document.getElementById('termsModal').style.display = 'flex';
+}
+
+function closeTermsModal() {
+  document.getElementById('termsModal').style.display = 'none';
+}
+
+function openShippingModal() {
+  document.getElementById('shippingModal').style.display = 'flex';
+}
+
+function closeShippingModal() {
+  document.getElementById('shippingModal').style.display = 'none';
+}

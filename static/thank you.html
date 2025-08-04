@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Thank You – Luméra</title>
@@ -19,7 +20,7 @@
       padding: 2rem;
       background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
     .thank-you-container h1 {
@@ -48,19 +49,43 @@
       background-color: #5c2a30;
     }
   </style>
-</head>
-<body>
 
+</head>
+
+<body>
   <div class="thank-you-container">
     <h1>Thank You for Your Purchase!</h1>
-    <p>Your Luméra candle is now part of your story. We’ve received your order and it’s already being lovingly prepared for shipping.</p>
+    <p>Your Luméra candle is now part of your story. We’ve received your order and it’s already being lovingly prepared
+      for shipping.</p>
     <a href="/index.html">Back to Home</a>
   </div>
+
   <script>
-  // Clear the cart after payment success
-  localStorage.removeItem("cart");
-</script>
+    window.addEventListener("load", function () {
+      // Clear entire localStorage for testing (careful!)
+      // If you only want to clear cart, comment out the next line
+      localStorage.clear(); // ← WARNING: clears all data, including login/session if any
 
+      // If you want to be safer, use only this:
+      // localStorage.removeItem("cart");
+      // localStorage.removeItem("cartItems");
+      // localStorage.removeItem("lumeraCart");
 
+      // Reset cart icon (if present)
+      const cartCount = document.querySelector(".cart-count");
+      if (cartCount) {
+        cartCount.textContent = "0";
+      }
+
+      console.log("✅ LocalStorage cleared.");
+
+      // Redirect after 5 seconds
+      setTimeout(function () {
+        window.location.href = "homepage.html";
+      }, 5000);
+    });
+  </script>
 </body>
+
+
 </html>
