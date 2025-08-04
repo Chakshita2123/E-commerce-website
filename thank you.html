@@ -48,7 +48,6 @@
       background-color: #5c2a30;
     }
   </style>
-  <meta http-equiv="refresh" content="4; url=index.html">
 
 </head>
 <body>
@@ -59,23 +58,32 @@
     <a href="homepage.html">Back to Home</a>
   </div>
 
- <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    // Clear all known cart-related keys
-    localStorage.removeItem("cart");
-    localStorage.removeItem("cartItems");
-    localStorage.removeItem("lumeraCart");
+<script>
+  window.addEventListener("load", function () {
+    // Clear entire localStorage for testing (careful!)
+    // If you only want to clear cart, comment out the next line
+    localStorage.clear(); // ← WARNING: clears all data, including login/session if any
 
-    // Also reset the cart count element if it exists
+    // If you want to be safer, use only this:
+    // localStorage.removeItem("cart");
+    // localStorage.removeItem("cartItems");
+    // localStorage.removeItem("lumeraCart");
+
+    // Reset cart icon (if present)
     const cartCount = document.querySelector(".cart-count");
     if (cartCount) {
       cartCount.textContent = "0";
     }
 
-    console.log("Cart cleared successfully.");
+    console.log("✅ LocalStorage cleared.");
+
+    // Redirect after 5 seconds
+    setTimeout(function () {
+      window.location.href = "homepage.html";
+    }, 5000);
   });
 </script>
-
+</body>
 
 
 </html>
