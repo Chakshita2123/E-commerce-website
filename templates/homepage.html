@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Luméra – Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
   <!-- Fonts for luxury look -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
@@ -21,16 +21,16 @@
   
   <nav class="nav-right">
     <ul>
-      <li><a href="shopall.html">SHOP ALL</a></li>
-      <li><a href="bestsellers.html">BESTSELLERS</a></li>
-      <li><a href="accessories.html">ACCESSORIES</a></li>
-      <li><a href="gifting.html">GIFTING</a></li>
+      <li><a href="{{ url_for('show_page', page_name='shopall.html') }}">SHOP ALL</a></li>
+      <li><a href="{{ url_for('show_page', page_name='bestsellers.html') }}">BESTSELLERS</a></li>
+      <li><a href="{{ url_for('show_page', page_name='accessories.html') }}">ACCESSORIES</a></li>
+      <li><a href="{{ url_for('show_page', page_name='gifting.html') }}">GIFTING</a></li>
       
 
     </ul>
   </nav>
   <div class="icons">
-  <a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a>
+  <a href="{{ url_for('show_page', page_name='cart.html') }}" class="cart-link">🛒 <span id="cart-count">0</span></a>
 </div>
 
   <div class="search-bar">
@@ -43,7 +43,7 @@
 
   <!-- Hero Banner -->
   <section class="hero-doft">
-  <img src="hero image.jpeg" alt="Festive Candles">
+  <img src="{{ url_for('static', filename='hero image.jpeg') }}" alt="Festive Candles">
   <div class="hero-text">
     <h2 class="hero-heading">
   <span class="regular">Get</span>
@@ -52,7 +52,7 @@
   <span class="italic">Luméra</span>
 </h2>
 
-    <a href="shopall.html" class="cta">SHOP NOW</a>
+    <a href="{{ url_for('show_page', page_name='shopall.html') }}" class="cta">SHOP NOW</a>
   </div>
 </section>
 
@@ -65,7 +65,7 @@
 
   <!-- View All Button -->
   <div class="view-all-container">
-    <a href="bestsellers.html" class="view-all-btn">VIEW ALL PRODUCTS</a>
+    <a href="{{ url_for('show_page', page_name='bestsellers.html') }}" class="view-all-btn">VIEW ALL PRODUCTS</a>
   </div>
 </section>
 
@@ -81,7 +81,7 @@
     </p>
   </div>
   <div class="about-right">
-    <img src="ourstory.webp" alt="Crafting Luméra Candle">
+    <img src="{{ url_for('static', filename='ourstory.webp') }}" alt="Crafting Luméra Candle">
   </div>
 </section>
 
@@ -91,23 +91,23 @@
     
     <!-- Floral & Aromatic -->
     <div class="fragrance-card">
-      <img src="floral.webp" alt="Floral & Aromatic">
+      <img src="{{ url_for('static', filename='floral.webp') }}" alt="Floral & Aromatic">
       <h3>Floral & Aromatic</h3>
-      <a href="floral.html" class="fragrance-btn">EXPLORE</a>
+      <a href="{{ url_for('show_page', page_name='floral.html') }}" class="fragrance-btn">EXPLORE</a>
     </div>
 
     <!-- Woody & Earthy -->
     <div class="fragrance-card">
-      <img src="woody.webp" alt="Woody & Earthy">
+      <img src="{{ url_for('static', filename='woody.webp') }}" alt="Woody & Earthy">
       <h3>Woody & Earthy</h3>
-      <a href="woody.html" class="fragrance-btn">EXPLORE</a>
+      <a href="{{ url_for('show_page', page_name='woody.html') }}" class="fragrance-btn">EXPLORE</a>
     </div>
 
     <!-- Opulent & Warm -->
     <div class="fragrance-card">
-      <img src="opulent.webp" alt="Opulent & Warm">
+      <img src="{{ url_for('static', filename='opulent.webp') }}" alt="Opulent & Warm">
       <h3>Opulent & Warm</h3>
-      <a href="opulent.html" class="fragrance-btn">EXPLORE</a>
+      <a href="{{ url_for('show_page', page_name='opulent.html') }}" class="fragrance-btn">EXPLORE</a>
     </div>
 
   </div>
@@ -125,9 +125,9 @@
     <div class="footer-col social">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#"><img src="instagram.svg" alt="Instagram"><span>Instagram</span></a>
-        <a href="#"><img src="facebook.svg" alt="Facebook"><span>Facebook</span></a>
-        <a href="#"><img src="twitter.svg" alt="Twitter"><span>Twitter</span></a>
+        <a href="#"><img src="{{ url_for('static', filename='instagram.svg') }}" alt="Instagram"><span>Instagram</span></a>
+        <a href="#"><img src="{{ url_for('static', filename='facebook.svg') }}" alt="Facebook"><span>Facebook</span></a>
+        <a href="#"><img src="{{ url_for('static', filename='twitter.svg') }}" alt="Twitter"><span>Twitter</span></a>
       </div>
     </div>
 
@@ -138,7 +138,7 @@
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
         <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="auth.html">Login / Sign Up</a></li>
+        <li><a href="{{ url_for('auth') }}">Login / Sign Up</a></li>
 
       </ul>
     </div>
