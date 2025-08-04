@@ -5,16 +5,20 @@
   <meta charset="UTF-8">
   <title>Luméra – Home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <script src="{{ url_for('static', filename='script.js') }}" defer></script>
   <!-- Fonts for luxury look -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
   <div class="top-banner">
-    FLAT 10% OFF — USE CODE <strong>WELCOME10</strong>
+    <marquee direction="left" scrollamount="10"> FLAT 10% OFF — USE CODE <strong>WELCOME10</strong></marquee>
   </div>
 
   <!-- Navigation Bar -->
@@ -27,13 +31,14 @@
         <li><a href="{{ url_for('show_page', page_name='bestsellers.html') }}">BESTSELLERS</a></li>
         <li><a href="{{ url_for('show_page', page_name='accessories.html') }}">ACCESSORIES</a></li>
         <li><a href="{{ url_for('show_page', page_name='gifting.html') }}">GIFTING</a></li>
-
-
       </ul>
     </nav>
     <div class="icons">
-      <a href="{{ url_for('show_page', page_name='cart.html') }}" class="cart-link">🛒 <span
-          id="cart-count">0</span></a>
+      <a href="{{ url_for('show_page', page_name='cart.html') }}" class="cart-link">🛒 <span id="cart-count">0</span></a>
+    </div>
+
+    <div class="auth-links">
+      <a href="{{ url_for('show_page', page_name='auth.html') }}">Login / Sign Up</a>
     </div>
 
     <div class="search-bar">
@@ -131,26 +136,23 @@
       </div>
 
       <!-- Social Media -->
-      <div class="footer-col social">
+      <div class="footer-socials">
         <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><img src="{{ url_for('static', filename='instagram.svg') }}"
-              alt="Instagram"><span>Instagram</span></a>
-          <a href="#"><img src="{{ url_for('static', filename='facebook.svg') }}"
-              alt="Facebook"><span>Facebook</span></a>
-          <a href="#"><img src="{{ url_for('static', filename='twitter.svg') }}" alt="Twitter"><span>Twitter</span></a>
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
+
       </div>
 
       <!-- Legal -->
       <div class="footer-col legal">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Shipping & Returns</a></li>
-          <li><a href="{{ url_for('auth') }}">Login / Sign Up</a></li>
-
+          <li><a href="#" onclick="openPrivacyModal()">Privacy Policy</a></li>
+          <li><a href="#" onclick="openTermsModal()">Terms of Service</a></li>
+          <li><a href="#" onclick="openShippingModal()">Shipping & Returns</a></li>
         </ul>
       </div>
 
@@ -161,7 +163,53 @@
     </div>
   </footer>
 
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePrivacyModal()">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p>
+        At Luméra, we value your privacy. We collect only necessary information to fulfill your orders and improve your
+        experience. Your data is never sold or shared with third parties without consent.
+      </p>
+      <p>
+        We use cookies to personalize your experience and analytics to improve our services. By using our website, you
+        agree to our privacy practices.
+      </p>
+      <!-- Add more content here as needed -->
+    </div>
+  </div>
 
+  <!-- Terms of Service Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeTermsModal()">&times;</span>
+      <h2>Terms of Service</h2>
+      <p>
+        By using Luméra, you agree to our terms. You may not use our products for illegal or unauthorized purposes. All
+        purchases are subject to availability and pricing.
+      </p>
+      <p>
+        We reserve the right to refuse service, update policies, and modify content at any time.
+      </p>
+    </div>
+  </div>
+
+  <!-- Shipping & Returns Modal -->
+  <div id="shippingModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeShippingModal()">&times;</span>
+      <h2>Shipping & Returns</h2>
+      <p>
+        Orders are processed within 1–3 business days. We offer standard and express shipping options. Once shipped,
+        you’ll receive tracking details.
+      </p>
+      <p>
+        If you're not satisfied, you may request a return within 7 days of delivery, provided the item is unused and in
+        original condition.
+      </p>
+    </div>
+  </div>
 
 
 

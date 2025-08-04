@@ -1,5 +1,6 @@
 /* Reset spacing to avoid unwanted margins */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -24,7 +25,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Align logo to left */
@@ -132,13 +133,14 @@ html, body {
 }
 
 /* ------------------------------------ */
-/* 🛍️ BEST SELLERS SECTION (Newly Added) */
+/* 🛍 BEST SELLERS SECTION (Newly Added) */
 /* ------------------------------------ */
 .best-sellers {
   padding: 3rem 2rem;
   background-color: #FFF9F4;
   text-align: center;
 }
+
 .bestseller-grid {
   display: flex;
   flex-wrap: wrap;
@@ -164,14 +166,17 @@ html, body {
 /* Product grid layout - updated for single-line row */
 .product-grid {
   display: flex;
-  flex-wrap: wrap;          /* ✅ Allow wrapping to next line */
+  flex-wrap: wrap;
+  /* ✅ Allow wrapping to next line */
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0;
 }
+
 .product-grid {
   display: flex;
-  flex-wrap: wrap;          /* ✅ Allow wrapping to next line */
+  flex-wrap: wrap;
+  /* ✅ Allow wrapping to next line */
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0;
@@ -182,16 +187,19 @@ html, body {
 .product-grid::-webkit-scrollbar {
   display: none;
 }
+
 .product-grid {
-  -ms-overflow-style: none;  /* IE/Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .card {
   width: 220px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   padding: 1rem;
   text-align: center;
   transition: transform 0.2s ease;
@@ -244,7 +252,8 @@ html, body {
 }
 
 .stars {
-  color: #E3A008; /* golden-yellow for stars */
+  color: #E3A008;
+  /* golden-yellow for stars */
   letter-spacing: 2px;
   font-size: 0.9rem;
   vertical-align: middle;
@@ -308,9 +317,9 @@ html, body {
 }
 
 .banner-content {
-    max-width: 500px;
-    text-align: left;
-    position: relative;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
 }
 
 .banner-heading {
@@ -380,7 +389,7 @@ html, body {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 1;
   border-radius: 5px;
 }
@@ -435,7 +444,7 @@ html, body {
   width: 220px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   padding: 1rem;
   text-align: center;
   transition: transform 0.2s ease;
@@ -488,7 +497,8 @@ html, body {
 }
 
 .stars {
-  color: #E3A008; /* golden-yellow for stars */
+  color: #E3A008;
+  /* golden-yellow for stars */
   letter-spacing: 2px;
   font-size: 0.9rem;
   vertical-align: middle;
@@ -540,7 +550,7 @@ html, body {
 .about-right img {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-heading {
@@ -578,7 +588,7 @@ html, body {
   width: 280px;
   background: #fffaf7;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
@@ -787,7 +797,7 @@ html, body {
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   font-family: 'Playfair Display', serif;
   background-color: #fffefc;
 }
@@ -915,6 +925,7 @@ html, body {
     font-size: 1.2rem;
   }
 }
+
 .auth-links {
   margin-left: 15px;
   font-size: 0.9rem;
@@ -928,7 +939,8 @@ html, body {
 }
 
 .auth-links a:hover {
-  color: #a77d52; /* or your brand color */
+  color: #a77d52;
+  /* or your brand color */
 }
 
 /* Modal Styles */
@@ -936,8 +948,10 @@ html, body {
   display: none;
   position: fixed;
   z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
@@ -955,8 +969,94 @@ html, body {
 
 .close-btn {
   position: absolute;
-  top: 10px; right: 15px;
+  top: 10px;
+  right: 15px;
   font-size: 24px;
   cursor: pointer;
   color: #444;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: #76363D;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #5c2a30;
+}
+
+
+.auth-links {
+  margin-left: 15px;
+  font-size: 0.9rem;
+}
+
+.auth-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #a77d52;
+  /* or your brand color */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #444;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: #76363D;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #5c2a30;
 }
