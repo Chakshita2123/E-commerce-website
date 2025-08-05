@@ -32,9 +32,19 @@
     <!-- Payment Methods -->
     <div class="payment-section">
       <h3>Choose Payment Method</h3>
-      <label><input type="radio" name="method" checked> UPI</label><br>
-      <label><input type="radio" name="method"> Debit/Credit Card</label><br>
-      <label><input type="radio" name="method"> Wallet</label>
+
+      <label><input type="radio" name="method" checked> 
+        <img src="https://img.icons8.com/color/24/upi.png" alt="UPI Icon"> UPI
+      </label><br>
+      
+      <label><input type="radio" name="method"> 
+        <img src="https://img.icons8.com/color/24/bank-card-back-side.png" alt="Card Icon"> Debit/Credit Card
+      </label><br>
+      
+      <label><input type="radio" name="method"> 
+        <img src="https://img.icons8.com/color/24/wallet-app.png" alt="Wallet Icon"> Wallet
+      </label>
+
     </div>
 
     <!-- Pay Button -->
@@ -42,11 +52,18 @@
   </div>
 
   <script>
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const itemsDiv = document.getElementById("payment-items");
-    const totalSpan = document.getElementById("payment-total");
-    let total = 0;
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const itemsDiv = document.getElementById("payment-items");
+  const totalSpan = document.getElementById("payment-total");
+  const payBtn = document.querySelector(".pay-btn");
+  let total = 0;
 
+  if (cart.length === 0) {
+    itemsDiv.innerHTML = "<p style='color: #8a4c4c; font-style: italic;'>Your cart is empty. Add some candles ✨</p>";
+    payBtn.disabled = true;
+    payBtn.style.opacity = "0.5";
+    payBtn.style.cursor = "not-allowed";
+  } else {
     cart.forEach(item => {
       const div = document.createElement("div");
       div.innerHTML = `<p>${item.name} × ${item.quantity} — ₹${item.price * item.quantity}</p>`;
@@ -56,13 +73,14 @@
 
     totalSpan.textContent = total;
 
-    // ✅ Add this for redirecting after payment
-    document.querySelector(".pay-btn").addEventListener("click", () => {
-      // Optionally validate billing info here
-      localStorage.removeItem("cart"); // clear cart after payment
-      window.location.href = "thank you.html"; // redirect to thank you page
+    // Enable and attach click only if cart has items
+    payBtn.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      window.location.href = "thank you.html";
     });
-  </script>
+  }
+</script>
+
 
 
 </body>
