@@ -114,11 +114,6 @@ def show_page(page_name):
     return render_template(page_name)
 
 
-
-if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=8080)
-
-
 @app.route('/payment')
 def payment():
     return render_template('payment.html')
@@ -126,3 +121,6 @@ def payment():
 @app.route('/thankyou')
 def thank_you():
     return render_template('thankyou.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, host='127.0.0.1', port=8080)
