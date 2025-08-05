@@ -123,3 +123,6 @@ if __name__ == '__main__':
 def payment():
     return render_template('payment.html')
 
+@app.route('/thankyou')
+def thank_you():
+    return render_template('thankyou.html')
