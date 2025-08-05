@@ -985,6 +985,37 @@ body {
   }
 }
 
+/* Glow effect on Pay Now button */
+.pay-btn:hover:not([disabled]) {
+  background-color: #5c2a30;
+  box-shadow: 0 0 12px rgba(118, 54, 61, 0.6);
+}
+
+/* Disabled Pay Now button look */
+.pay-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Payment method icons */
+label img {
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+/* "Your cart is empty" message */
+.empty-message {
+  color: #8a4c4c;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+
 /* Tablet Responsive */
 @media (max-width: 768px) {
   .main-nav {
