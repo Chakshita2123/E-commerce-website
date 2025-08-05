@@ -266,6 +266,16 @@ def woody():
 def opulent():
     return render_template('opulent.html')
 
+@app.route('/<page_name>')
+def show_page(page_name):
+    # Ignore browser's automatic favicon request
+    if page_name == "favicon.ico":
+        return "", 204
+
+    try:
+        return render_template(f"{page_name}.html")
+    except:
+        return "Page not found", 404
 # ------------------ Run ------------------
 
 if __name__ == '__main__':
