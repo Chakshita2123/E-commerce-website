@@ -104,14 +104,35 @@ def homepage():
     return render_template('homepage.html')
 
 
-@app.route('/<page_name>')
-def show_page(page_name):
-    # Ignore browser's automatic favicon request
-    if page_name == "favicon.ico":
-        return "", 204
+# @app.route('/<page_name>')
+# def show_page(page_name):
+#     # Ignore browser's automatic favicon request
+#     if page_name == "favicon.ico":
+#         return "", 204
 
-    # Render the page if it exists
-    return render_template(f"{page_name}.html")
+#     # Render the page if it exists
+#     return render_template(f"{page_name}.html")
+@app.route('/')
+def homepage():
+    return render_template('homepage.html')
+
+@app.route('/bestsellers')
+def bestsellers():
+    return render_template('bestsellers.html')
+
+@app.route('/fragrance')
+def fragrance():
+    return render_template('fragrance.html')
+
+@app.route('/gifting')
+def gifting():
+    return render_template('gifting.html')
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
+
+# and so on...
 
 
 
