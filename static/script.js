@@ -3,7 +3,7 @@ const sampleProducts = [
     id: 1,
     name: "Midnight Rose",
     price: 899,
-    image: "/static/midnight-rose.webp",
+    image: "static/midnight-rose.webp",
     description: "Rich Rose | Midnight Vibes",
     rating: 4.5,
     reviews: 6
@@ -12,7 +12,7 @@ const sampleProducts = [
     id: 2,
     name: "Scottish Mist",
     price: 999,
-    image: "/static/scottish-mist.webp",
+    image: "static/scottish-mist.webp",
     description: "Fresh Lavender | Cold Breeze",
     rating: 5,
     reviews: 9
@@ -21,7 +21,7 @@ const sampleProducts = [
     id: 3,
     name: "Citrus Bloom",
     price: 849,
-    image: "/static/citrus-bloom.webp",
+    image: "static/citrus-bloom.webp",
     description: "Zesty Citrus | Fresh Bloom",
     rating: 4,
     reviews: 2
@@ -61,14 +61,14 @@ if (document.getElementById("hero-products")) {
 }
 
 const bestsellersPage = [
-  { id: 1, name: "Midnight Rose", price: 899, image: "/static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
-  { id: 2, name: "Scottish Mist", price: 999, image: "/static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
-  { id: 3, name: "Citrus Bloom", price: 849, image: "/static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
-  { id: 4, name: "Vanilla Amber", price: 1050, image: "/static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
-  { id: 5, name: "Lavender Noir", price: 999, image: "/static/lavender-noir.webp", description: "Lavender & Musk", rating: 4.2, reviews: 5 },
-  { id: 6, name: "Rose Luxe", price: 1150, image: "/static/rose-luxe.webp", description: "Damask Rose & Oud", rating: 4.9, reviews: 8 },
-  { id: 7, name: "Candlelight Bloom", price: 950, image: "/static/candlelight-bloom.webp", description: "Cherry Blossom & Cedar", rating: 4.3, reviews: 3 },
-  { id: 8, name: "Velvet Amber", price: 1099, image: "/static/velvet-amber.webp", description: "Amber & Tonka", rating: 5, reviews: 7 }
+  { id: 1, name: "Midnight Rose", price: 899, image: "static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
+  { id: 2, name: "Scottish Mist", price: 999, image: "static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
+  { id: 3, name: "Citrus Bloom", price: 849, image: "static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
+  { id: 4, name: "Vanilla Amber", price: 1050, image: "static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
+  { id: 5, name: "Lavender Noir", price: 999, image: "static/lavender-noir.webp", description: "Lavender & Musk", rating: 4.2, reviews: 5 },
+  { id: 6, name: "Rose Luxe", price: 1150, image: "static/rose-luxe.webp", description: "Damask Rose & Oud", rating: 4.9, reviews: 8 },
+  { id: 7, name: "Candlelight Bloom", price: 950, image: "static/candlelight-bloom.webp", description: "Cherry Blossom & Cedar", rating: 4.3, reviews: 3 },
+  { id: 8, name: "Velvet Amber", price: 1099, image: "static/velvet-amber.webp", description: "Amber & Tonka", rating: 5, reviews: 7 }
 ];
 
 if (document.getElementById("bestseller-page-products")) {
@@ -96,7 +96,7 @@ const floralOnly = [
     id: 101,
     name: "Bloom Garden",
     price: 899,
-    image: "/static/bloom-garden.webp",
+    image: "static/bloom-garden.webp",
     description: "Jasmine & Peony",
     rating: 4.5,
     reviews: 10
@@ -105,7 +105,7 @@ const floralOnly = [
     id: 102,
     name: "Petal Kiss",
     price: 949,
-    image: "/static/petal-kiss.webp",
+    image: "static/petal-kiss.webp",
     description: "Rose & Freesia",
     rating: 5,
     reviews: 6
@@ -114,7 +114,7 @@ const floralOnly = [
     id: 103,
     name: "Morning Blossom",
     price: 899,
-    image: "/static/morning-blossom.webp",
+    image: "static/morning-blossom.webp",
     description: "Lily & Bergamot",
     rating: 4,
     reviews: 4
@@ -123,7 +123,7 @@ const floralOnly = [
     id: 104,
     name: "Fresh Flora",
     price: 999,
-    image: "/static/fresh-flora.webp",
+    image: "static/fresh-flora.webp",
     description: "Orchid & Green Tea",
     rating: 4.8,
     reviews: 8
@@ -132,7 +132,7 @@ const floralOnly = [
     id: 105,
     name: "Blush Dew",
     price: 975,
-    image: "/static/blush-dew.webp",
+    image: "static/blush-dew.webp",
     description: "Tuberose & Dew Drops",
     rating: 4.3,
     reviews: 5
@@ -141,7 +141,7 @@ const floralOnly = [
     id: 106,
     name: "Floral Whisper",
     price: 1020,
-    image: "/static/floral-whisper.webp",
+    image: "static/floral-whisper.webp",
     description: "Magnolia & White Tea",
     rating: 4.7,
     reviews: 7
@@ -173,7 +173,7 @@ const woodyOnly = [
     id: 301,
     name: "Cedar Calm",
     price: 1050,
-    image: "/static/cedar-calm.webp",
+    image: "static/cedar-calm.webp",
     description: "Cedarwood & Musk",
     rating: 5,
     reviews: 11
@@ -182,7 +182,7 @@ const woodyOnly = [
     id: 302,
     name: "Sandal Soul",
     price: 1025,
-    image: "/static/sandal-soul.webp",
+    image: "static/sandal-soul.webp",
     description: "Sandalwood & Amber",
     rating: 4.6,
     reviews: 7
@@ -191,7 +191,7 @@ const woodyOnly = [
     id: 303,
     name: "Earth Elixir",
     price: 985,
-    image: "/static/earth-elixir.webp",
+    image: "static/earth-elixir.webp",
     description: "Patchouli & Oak",
     rating: 4.2,
     reviews: 5
@@ -200,7 +200,7 @@ const woodyOnly = [
     id: 304,
     name: "Woodland Trail",
     price: 999,
-    image: "/static/wooden-trail.webp",
+    image: "static/wooden-trail.webp",
     description: "Vetiver & Balsam",
     rating: 4.7,
     reviews: 9
@@ -209,7 +209,7 @@ const woodyOnly = [
     id: 305,
     name: "Rustic Charm",
     price: 1075,
-    image: "/static/rustic-charm.webp",
+    image: "static/rustic-charm.webp",
     description: "Pinewood & Leather",
     rating: 4.4,
     reviews: 6
@@ -218,7 +218,7 @@ const woodyOnly = [
     id: 306,
     name: "Misty Forest",
     price: 990,
-    image: "/static/misty-forest.webp",
+    image: "static/misty-forest.webp",
     description: "Rainwood & Moss",
     rating: 4.8,
     reviews: 8
@@ -250,7 +250,7 @@ const opulentOnly = [
     id: 401,
     name: "Gold Musk",
     price: 1100,
-    image: "/static/gold-musk.webp",
+    image: "static/gold-musk.webp",
     description: "White Musk & Vanilla",
     rating: 5,
     reviews: 14
@@ -259,7 +259,7 @@ const opulentOnly = [
     id: 402,
     name: "Velvet Spice",
     price: 1125,
-    image: "/static/velvet-spice.webp",
+    image: "static/velvet-spice.webp",
     description: "Spice & Incense",
     rating: 4.9,
     reviews: 13
@@ -268,7 +268,7 @@ const opulentOnly = [
     id: 403,
     name: "Oud Royale",
     price: 1199,
-    image: "/static/oud-royale.webp",
+    image: "static/oud-royale.webp",
     description: "Oud & Clove",
     rating: 5,
     reviews: 10
@@ -277,7 +277,7 @@ const opulentOnly = [
     id: 404,
     name: "Amber Luxe",
     price: 1150,
-    image: "/static/amber-luxe.webp",
+    image: "static/amber-luxe.webp",
     description: "Amber & Leather",
     rating: 4.6,
     reviews: 12
@@ -286,7 +286,7 @@ const opulentOnly = [
     id: 405,
     name: "Royal Ember",
     price: 1200,
-    image: "/static/royal-ember.webp",
+    image: "static/royal-ember.webp",
     description: "Saffron & Resin",
     rating: 4.8,
     reviews: 9
@@ -295,7 +295,7 @@ const opulentOnly = [
     id: 406,
     name: "Orient Bloom",
     price: 1175,
-    image: "/static/orient-bloom.webp",
+    image: "static/orient-bloom.webp",
     description: "Oud & Rose",
     rating: 4.7,
     reviews: 11
@@ -323,23 +323,23 @@ if (document.getElementById("opulent-page-products")) {
 }
 
 const shopAllProducts = [
-  { id: 1, name: "Midnight Rose", price: 899, image: "/static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
-  { id: 2, name: "Scottish Mist", price: 999, image: "/static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
-  { id: 3, name: "Citrus Bloom", price: 849, image: "/static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
-  { id: 4, name: "Vanilla Amber", price: 1050, image: "/static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
-  { id: 5, name: "Bloom Garden", price: 899, image: "/static/bloom-garden.webp", description: "Jasmine & Peony", rating: 4.5, reviews: 10 },
-  { id: 6, name: "Petal Kiss", price: 949, image: "/static/petal-kiss.webp", description: "Rose & Freesia", rating: 5, reviews: 6 },
-  { id: 7, name: "Cedar Calm", price: 1050, image: "/static/cedar-calm.webp", description: "Cedarwood & Musk", rating: 5, reviews: 11 },
-  { id: 8, name: "Gold Musk", price: 1100, image: "/static/gold-musk.webp", description: "White Musk & Vanilla", rating: 5, reviews: 14 },
-  { id: 9, name: "Velvet Spice", price: 1125, image: "/static/velvet-spice.webp", description: "Spice & Incense", rating: 4.9, reviews: 13 },
-  { id: 10, name: "Morning Blossom", price: 899, image: "/static/morning-blossom.webp", description: "Lily & Bergamot", rating: 4, reviews: 4 },
-  { id: 11, name: "Fresh Flora", price: 999, image: "/static/fresh-flora.webp", description: "Orchid & Green Tea", rating: 4.8, reviews: 8 },
-  { id: 12, name: "Amber Luxe", price: 1150, image: "/static/amber-luxe.webp", description: "Amber & Leather", rating: 4.6, reviews: 12 },
+  { id: 1, name: "Midnight Rose", price: 899, image: "static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
+  { id: 2, name: "Scottish Mist", price: 999, image: "static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
+  { id: 3, name: "Citrus Bloom", price: 849, image: "static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
+  { id: 4, name: "Vanilla Amber", price: 1050, image: "static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
+  { id: 5, name: "Bloom Garden", price: 899, image: "static/bloom-garden.webp", description: "Jasmine & Peony", rating: 4.5, reviews: 10 },
+  { id: 6, name: "Petal Kiss", price: 949, image: "static/petal-kiss.webp", description: "Rose & Freesia", rating: 5, reviews: 6 },
+  { id: 7, name: "Cedar Calm", price: 1050, image: "static/cedar-calm.webp", description: "Cedarwood & Musk", rating: 5, reviews: 11 },
+  { id: 8, name: "Gold Musk", price: 1100, image: "static/gold-musk.webp", description: "White Musk & Vanilla", rating: 5, reviews: 14 },
+  { id: 9, name: "Velvet Spice", price: 1125, image: "static/velvet-spice.webp", description: "Spice & Incense", rating: 4.9, reviews: 13 },
+  { id: 10, name: "Morning Blossom", price: 899, image: "static/morning-blossom.webp", description: "Lily & Bergamot", rating: 4, reviews: 4 },
+  { id: 11, name: "Fresh Flora", price: 999, image: "static/fresh-flora.webp", description: "Orchid & Green Tea", rating: 4.8, reviews: 8 },
+  { id: 12, name: "Amber Luxe", price: 1150, image: "static/amber-luxe.webp", description: "Amber & Leather", rating: 4.6, reviews: 12 },
   {
     id: 13,
     name: "Amber Nights",
     price: 1099,
-    image: "/static/amber-nights.webp",
+    image: "static/amber-nights.webp",
     description: "Warm Amber | Cozy Evenings",
     rating: 4.7,
     reviews: 11
@@ -348,7 +348,7 @@ const shopAllProducts = [
     id: 14,
     name: "Peony Luxe",
     price: 999,
-    image: "/static/peony-luxe.webp",
+    image: "static/peony-luxe.webp",
     description: "Peony Bloom | Spring Fresh",
     rating: 4.5,
     reviews: 6
@@ -357,7 +357,7 @@ const shopAllProducts = [
     id: 15,
     name: "Oud Whisper",
     price: 1299,
-    image: "/static/oud-whisper.webp",
+    image: "static/oud-whisper.webp",
     description: "Oud & Resin | Earthy Woods",
     rating: 4.9,
     reviews: 9
@@ -366,7 +366,7 @@ const shopAllProducts = [
     id: 16,
     name: "Blushed Fig",
     price: 899,
-    image: "/static/blush-fug.webp",
+    image: "static/blush-fug.webp",
     description: "Sweet Fig | Subtle Floral",
     rating: 4.3,
     reviews: 7
@@ -398,7 +398,7 @@ const accessoriesProducts = [
     id: 1,
     name: "Wick Trimmer",
     price: 399,
-    image: "/static/wick-trimmer.webp",
+    image: "static/wick-trimmer.webp",
     description: "Keep your candle clean",
     rating: 4.6,
     reviews: 12
@@ -407,7 +407,7 @@ const accessoriesProducts = [
     id: 2,
     name: "Candle Snuffer",
     price: 349,
-    image: "/static/candle-snuffer.webp",
+    image: "static/candle-snuffer.webp",
     description: "Elegant snuffing tool",
     rating: 4.8,
     reviews: 9
@@ -416,7 +416,7 @@ const accessoriesProducts = [
     id: 3,
     name: "Candle Tray",
     price: 599,
-    image: "/static/candle-tray.webp",
+    image: "static/candle-tray.webp",
     description: "Marble base for jars",
     rating: 5,
     reviews: 7
@@ -425,7 +425,7 @@ const accessoriesProducts = [
     id: 4,
     name: "Gift Box Set",
     price: 999,
-    image: "/static/gift-box.webp",
+    image: "static/gift-box.webp",
     description: "Luxury packaging",
     rating: 4.9,
     reviews: 15
@@ -434,7 +434,7 @@ const accessoriesProducts = [
     id: 5,
     name: "Lighter Wand",
     price: 299,
-    image: "/static/lighter-wand.webp",
+    image: "static/lighter-wand.webp",
     description: "Refillable gas wand",
     rating: 4.4,
     reviews: 5
@@ -443,7 +443,7 @@ const accessoriesProducts = [
     id: 6,
     name: "Glass Cloche",
     price: 899,
-    image: "/static/glass-cloche.webp",
+    image: "static/glass-cloche.webp",
     description: "Dust-protective cover",
     rating: 4.7,
     reviews: 10
@@ -452,7 +452,7 @@ const accessoriesProducts = [
     id: 7,
     name: "Candle Coaster",
     price: 249,
-    image: "/static/candle-coaster.webp",
+    image: "static/candle-coaster.webp",
     description: "Minimal ceramic base",
     rating: 4.3,
     reviews: 4
@@ -461,7 +461,7 @@ const accessoriesProducts = [
     id: 8,
     name: "Matchbox Set",
     price: 199,
-    image: "/static/matchbox-set.webp",
+    image: "static/matchbox-set.webp",
     description: "Long luxury matches",
     rating: 4.6,
     reviews: 6
@@ -489,12 +489,12 @@ if (document.getElementById("accessories-products")) {
 }
 
 const giftingProducts = [
-  { id: 701, name: "Festive Gift Box", price: 1499, image: "/static/festive.webp", description: "3 Candles + Accessories", rating: 4.8, reviews: 12 },
-  { id: 702, name: "Luxury Duo Set", price: 1299, image: "/static/luxury.webp", description: "2 Candles + Snuffer", rating: 5, reviews: 8 },
-  { id: 703, name: "Mini Jar Trio", price: 999, image: "/static/mini-jar.webp", description: "3 Mini Fragrance Jars", rating: 4.6, reviews: 10 },
-  { id: 704, name: "Spa Vibes Box", price: 1399, image: "/static/spa-vibes.webp", description: "Candle + Bath Set", rating: 4.7, reviews: 7 },
-  { id: 705, name: "Warm Glow Pack", price: 1199, image: "/static/warm.webp", description: "Amber Candle + Wick Trimmer", rating: 4.9, reviews: 6 },
-  { id: 706, name: "Celebration Combo", price: 1599, image: "/static/celebration.webp", description: "Scented Candle Duo + Match Jar", rating: 5, reviews: 9 }
+  { id: 701, name: "Festive Gift Box", price: 1499, image: "static/festive.webp", description: "3 Candles + Accessories", rating: 4.8, reviews: 12 },
+  { id: 702, name: "Luxury Duo Set", price: 1299, image: "static/luxury.webp", description: "2 Candles + Snuffer", rating: 5, reviews: 8 },
+  { id: 703, name: "Mini Jar Trio", price: 999, image: "static/mini-jar.webp", description: "3 Mini Fragrance Jars", rating: 4.6, reviews: 10 },
+  { id: 704, name: "Spa Vibes Box", price: 1399, image: "static/spa-vibes.webp", description: "Candle + Bath Set", rating: 4.7, reviews: 7 },
+  { id: 705, name: "Warm Glow Pack", price: 1199, image: "static/warm.webp", description: "Amber Candle + Wick Trimmer", rating: 4.9, reviews: 6 },
+  { id: 706, name: "Celebration Combo", price: 1599, image: "static/celebration.webp", description: "Scented Candle Duo + Match Jar", rating: 5, reviews: 9 }
 ];
 
 if (document.getElementById("gifting-products")) {
