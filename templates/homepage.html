@@ -27,18 +27,18 @@
 
     <nav class="nav-right">
       <ul>
-        <li><a href="{{ url_for('show_page', page_name='shopall.html') }}">SHOP ALL</a></li>
-        <li><a href="{{ url_for('show_page', page_name='bestsellers.html') }}">BESTSELLERS</a></li>
-        <li><a href="{{ url_for('show_page', page_name='accessories.html') }}">ACCESSORIES</a></li>
-        <li><a href="{{ url_for('show_page', page_name='gifting.html') }}">GIFTING</a></li>
+        <li><a href="{{ url_for('show_page', page_name='shopall') }}">SHOP ALL</a></li>
+        <li><a href="{{ url_for('show_page', page_name='bestsellers') }}">BESTSELLERS</a></li>
+        <li><a href="{{ url_for('show_page', page_name='accessories') }}">ACCESSORIES</a></li>
+        <li><a href="{{ url_for('show_page', page_name='gifting') }}">GIFTING</a></li>
       </ul>
     </nav>
     <div class="icons">
-      <a href="{{ url_for('show_page', page_name='cart.html') }}" class="cart-link">🛒 <span id="cart-count">0</span></a>
+      <a href="{{ url_for('show_page', page_name='cart') }}" class="cart-link">🛒 <span id="cart-count">0</span></a>
     </div>
 
     <div class="auth-links">
-      <a href="{{ url_for('show_page', page_name='auth.html') }}">Login / Sign Up</a>
+      <a href="{{ url_for('show_page', page_name='auth') }}">Login / Sign Up</a>
     </div>
 
     <div class="search-bar">
@@ -60,7 +60,7 @@
         <span class="italic">Luméra</span>
       </h2>
 
-      <a href="{{ url_for('show_page', page_name='shopall.html') }}" class="cta">SHOP NOW</a>
+      <a href="{{ url_for('show_page', page_name='shopall') }}" class="cta">SHOP NOW</a>
     </div>
   </section>
 
@@ -73,7 +73,7 @@
 
     <!-- View All Button -->
     <div class="view-all-container">
-      <a href="{{ url_for('show_page', page_name='bestsellers.html') }}" class="view-all-btn">VIEW ALL PRODUCTS</a>
+      <a href="{{ url_for('show_page', page_name='bestsellers') }}" class="view-all-btn">VIEW ALL PRODUCTS</a>
     </div>
   </section>
 
@@ -106,21 +106,21 @@
       <div class="fragrance-card">
         <img src="{{ url_for('static', filename='floral.webp') }}" alt="Floral & Aromatic">
         <h3>Floral & Aromatic</h3>
-        <a href="{{ url_for('show_page', page_name='floral.html') }}" class="fragrance-btn">EXPLORE</a>
+        <a href="{{ url_for('show_page', page_name='floralANDaromatic') }}" class="fragrance-btn">EXPLORE</a>
       </div>
 
       <!-- Woody & Earthy -->
       <div class="fragrance-card">
         <img src="{{ url_for('static', filename='woody.webp') }}" alt="Woody & Earthy">
         <h3>Woody & Earthy</h3>
-        <a href="{{ url_for('show_page', page_name='woody.html') }}" class="fragrance-btn">EXPLORE</a>
+        <a href="{{ url_for('show_page', page_name='woody') }}" class="fragrance-btn">EXPLORE</a>
       </div>
 
       <!-- Opulent & Warm -->
       <div class="fragrance-card">
         <img src="{{ url_for('static', filename='opulent.webp') }}" alt="Opulent & Warm">
         <h3>Opulent & Warm</h3>
-        <a href="{{ url_for('show_page', page_name='opulent.html') }}" class="fragrance-btn">EXPLORE</a>
+        <a href="{{ url_for('show_page', page_name='opulent') }}" class="fragrance-btn">EXPLORE</a>
       </div>
 
     </div>
