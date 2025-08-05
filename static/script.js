@@ -682,7 +682,7 @@ function closeShippingModal() {
 
 
 function updateCartUI() {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItems = JSON.parse(localStorage.getItem('lumera_cart')) || [];
   const cartContainer = document.getElementById('cart-items');
   const totalElement = document.getElementById('cart-total');
   const emptyMessage = document.getElementById('empty-cart-message');
