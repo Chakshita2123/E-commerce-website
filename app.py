@@ -256,7 +256,7 @@ def shop():
 # Specific fragrance category pages (not /fragrance)
 @app.route('/floralANDaromatic')
 def floral_aromatic():
-    return render_template('floralANDaromatic.html')
+    return render_template('floral.html')
 
 @app.route('/woody')
 def woody():
