@@ -59,7 +59,7 @@
   let total = 0;
 
   if (cart.length === 0) {
-    itemsDiv.innerHTML = "<p style='color: #8a4c4c; font-style: italic;'>Your cart is empty. Add some candles ✨</p>";
+    itemsDiv.innerHTML = "<p class='empty-message'>Your cart is empty. Add some candles ✨</p>";
     payBtn.disabled = true;
     payBtn.style.opacity = "0.5";
     payBtn.style.cursor = "not-allowed";
