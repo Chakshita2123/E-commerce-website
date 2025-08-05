@@ -603,9 +603,19 @@ function updateCartCount() {
 function renderCart() {
   const cartContainer = document.getElementById('cart-items');
   const totalContainer = document.getElementById('cart-total');
+  const emptyMessage = document.getElementById('empty-cart-message');
 
   cartContainer.innerHTML = '';
   let total = 0;
+
+  if (cart.length === 0) {
+    emptyMessage.style.display = 'block';
+    totalContainer.style.display = 'none';
+    return;
+  } else {
+    emptyMessage.style.display = 'none';
+    totalContainer.style.display = 'block';
+  }
 
   cart.forEach((item, index) => {
     const subtotal = item.price * item.quantity;
@@ -629,6 +639,7 @@ function renderCart() {
 
   totalContainer.innerHTML = `<strong>Total: ₹${total}</strong>`;
 }
+
 
 // ➕➖ Quantity Controls
 function changeQuantity(index, delta) {
@@ -681,11 +692,11 @@ function closeShippingModal() {
 
 
 
-function updateCartUI() {
-  const cartItems = JSON.parse(localStorage.getItem('lumera_cart')) || [];
-  const cartContainer = document.getElementById('cart-items');
-  const totalElement = document.getElementById('cart-total');
-  const emptyMessage = document.getElementById('empty-cart-message');
+// function updateCartUI() {
+//   const cartItems = JSON.parse(localStorage.getItem('lumera_cart')) || [];
+//   const cartContainer = document.getElementById('cart-items');
+//   const totalElement = document.getElementById('cart-total');
+//   const emptyMessage = document.getElementById('empty-cart-message');
 
   cartContainer.innerHTML = "";
 
