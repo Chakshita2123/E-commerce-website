@@ -905,6 +905,16 @@ body {
   background-color: #e0e0e0;
 }
 
+#empty-cart-message {
+  text-align: center;
+  color: #999;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+
+
 .checkout-btn {
   background-color: #000;
   color: #fff;
