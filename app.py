@@ -111,7 +111,8 @@ def show_page(page_name):
         return "", 204
 
     # Render the page if it exists
-    return render_template(page_name)
+    return render_template(f"{page_name}.html")
+
 
 
 if __name__ == '__main__':
