@@ -678,3 +678,46 @@ function openShippingModal() {
 function closeShippingModal() {
   document.getElementById('shippingModal').style.display = 'none';
 }
+
+
+
+function updateCartUI() {
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartContainer = document.getElementById('cart-items');
+  const totalElement = document.getElementById('cart-total');
+  const emptyMessage = document.getElementById('empty-cart-message');
+
+  cartContainer.innerHTML = "";
+
+  if (cartItems.length === 0) {
+    emptyMessage.style.display = 'block';
+    totalElement.textContent = '';
+    return;
+  }
+
+  emptyMessage.style.display = 'none';
+
+  let total = 0;
+
+  cartItems.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+    itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-info">
+        <h4>${item.name}</h4>
+        <p>₹${item.price}</p>
+      </div>
+      <div class="cart-controls">
+        <button onclick="decreaseQty('${item.id}')">−</button>
+        <span>${item.quantity}</span>
+        <button onclick="increaseQty('${item.id}')">+</button>
+        <button onclick="removeItem('${item.id}')">🗑</button>
+      </div>
+    `;
+    cartContainer.appendChild(itemDiv);
+    total += item.price * item.quantity;
+  });
+
+  totalElement.textContent = total;
+}
