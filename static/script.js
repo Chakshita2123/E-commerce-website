@@ -61,14 +61,14 @@ if (document.getElementById("hero-products")) {
 }
 
 const bestsellersPage = [
-  { id: 1, name: "Midnight Rose", price: 899, image: "static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
-  { id: 2, name: "Scottish Mist", price: 999, image: "static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
-  { id: 3, name: "Citrus Bloom", price: 849, image: "static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
-  { id: 4, name: "Vanilla Amber", price: 1050, image: "static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
-  { id: 5, name: "Lavender Noir", price: 999, image: "static/lavender-noir.webp", description: "Lavender & Musk", rating: 4.2, reviews: 5 },
-  { id: 6, name: "Rose Luxe", price: 1150, image: "static/rose-luxe.webp", description: "Damask Rose & Oud", rating: 4.9, reviews: 8 },
-  { id: 7, name: "Candlelight Bloom", price: 950, image: "static/candlelight-bloom.webp", description: "Cherry Blossom & Cedar", rating: 4.3, reviews: 3 },
-  { id: 8, name: "Velvet Amber", price: 1099, image: "static/velvet-amber.webp", description: "Amber & Tonka", rating: 5, reviews: 7 }
+  { id: 1, name: "Midnight Rose", price: 899, image: "/static/midnight-rose.webp", description: "Rich Rose | Midnight Vibes", rating: 4.5, reviews: 6 },
+  { id: 2, name: "Scottish Mist", price: 999, image: "/static/scottish-mist.webp", description: "Fresh Lavender | Cold Breeze", rating: 5, reviews: 9 },
+  { id: 3, name: "Citrus Bloom", price: 849, image: "/static/citrus-bloom.webp", description: "Zesty Citrus | Fresh Bloom", rating: 4, reviews: 2 },
+  { id: 4, name: "Vanilla Amber", price: 1050, image: "/static/vanilla-amber.webp", description: "Warm Vanilla | Amber Touch", rating: 0, reviews: 0 },
+  { id: 5, name: "Lavender Noir", price: 999, image: "/static/lavender-noir.webp", description: "Lavender & Musk", rating: 4.2, reviews: 5 },
+  { id: 6, name: "Rose Luxe", price: 1150, image: "/static/rose-luxe.webp", description: "Damask Rose & Oud", rating: 4.9, reviews: 8 },
+  { id: 7, name: "Candlelight Bloom", price: 950, image: "/static/candlelight-bloom.webp", description: "Cherry Blossom & Cedar", rating: 4.3, reviews: 3 },
+  { id: 8, name: "Velvet Amber", price: 1099, image: "/static/velvet-amber.webp", description: "Amber & Tonka", rating: 5, reviews: 7 }
 ];
 
 if (document.getElementById("bestseller-page-products")) {
