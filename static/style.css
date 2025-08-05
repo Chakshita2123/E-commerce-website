@@ -737,62 +737,14 @@ body {
   background-color: #f0f0f0;
 }
 
+/* --- GENERAL CART SECTION --- */
 .cart-section {
   padding: 3rem;
   background-color: #FFF9F4;
   font-family: 'Playfair Display', serif;
 }
 
-.cart-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-}
-
-.cart-item img {
-  width: 80px;
-  margin-right: 20px;
-  border-radius: 8px;
-}
-
-.cart-info {
-  flex-grow: 1;
-}
-
-.cart-info h4 {
-  margin: 0 0 5px 0;
-  font-size: 1rem;
-}
-
-.cart-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.cart-summary {
-  margin-top: 2rem;
-  font-size: 1.1rem;
-}
-
-.cart-summary button {
-  background-color: #76363D;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  margin-right: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cart-summary button:hover {
-  background-color: #5c2a30;
-}
-
-/* --- CART PAGE STYLING --- */
-
+/* --- CART PAGE CONTAINER --- */
 .cart-page {
   max-width: 900px;
   margin: 40px auto;
@@ -812,13 +764,14 @@ body {
   letter-spacing: 2px;
 }
 
+/* --- CART ITEMS CONTAINER --- */
 .cart-items {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Individual cart item layout - dynamically inserted by JS */
+/* --- INDIVIDUAL CART ITEM --- */
 .cart-item {
   display: flex;
   align-items: center;
@@ -826,9 +779,11 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #eee;
 }
 
+/* --- PRODUCT IMAGE --- */
 .cart-item img {
   width: 80px;
   height: 80px;
@@ -837,6 +792,7 @@ body {
   margin-right: 20px;
 }
 
+/* --- ITEM DETAILS --- */
 .cart-item-details {
   flex: 1;
 }
@@ -852,6 +808,7 @@ body {
   color: #666;
 }
 
+/* --- QUANTITY CONTROLS --- */
 .quantity-control {
   display: flex;
   align-items: center;
@@ -867,6 +824,7 @@ body {
   border-radius: 6px;
 }
 
+/* --- CART TOTAL --- */
 .cart-total {
   text-align: right;
   font-size: 20px;
@@ -880,7 +838,7 @@ body {
   color: #000;
 }
 
-/* Buttons */
+/* --- ACTION BUTTONS --- */
 .cart-buttons {
   display: flex;
   justify-content: flex-end;
@@ -905,13 +863,25 @@ body {
   background-color: #e0e0e0;
 }
 
+.cart-buttons button:last-child {
+  background-color: #76363D;
+  color: white;
+}
+
+.cart-buttons button:last-child:hover {
+  background-color: #5c2a30;
+}
+
+/* --- EMPTY CART MESSAGE --- */
 #empty-cart-message {
   text-align: center;
   color: #999;
-  font-size: 1.1rem;
-  margin-top: 2rem;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  font-style: italic;
   font-family: 'Playfair Display', serif;
 }
+
 
 
 
