@@ -791,6 +791,143 @@ body {
   background-color: #5c2a30;
 }
 
+/* --- CART PAGE STYLING --- */
+
+.cart-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Georgia', serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #2d2d2d;
+  letter-spacing: 2px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual cart item layout - dynamically inserted by JS */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  color: #666;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.cart-total-amount {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Buttons */
+.cart-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.cart-buttons button {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.cart-buttons button:first-child {
+  background-color: #f2f2f2;
+  color: #444;
+}
+
+.cart-buttons button:first-child:hover {
+  background-color: #e0e0e0;
+}
+
+.checkout-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.checkout-btn:hover {
+  background-color: #222;
+}
+
+@media screen and (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+}
+
 
 .payment-container {
   max-width: 600px;
